@@ -1,22 +1,13 @@
-#include <bits/stdc++.h>
-
-using namespace std;
-
+#include <iostream>
 int main(){
-	int K, N = 0, input;
-	int arr[100'000] = {0};
-
-	cin >> K;
-
+	int K,t,N=0,r=0;
+	int s[100'000]={0};
+	std::cin >> K;
 	while(K--){
-		cin >> input;
-		if(input) arr[N++] = input;
+		std::cin >> t;
+		if(t) s[N++] = t;
 		else N--;
 	}
-
-	int sum = 0;
-	for(int i=0;i<N;i++){
-		sum += arr[i];
-	}
-	cout << sum;
+	while(N--) r += s[N];
+	std::cout << r;
 }
